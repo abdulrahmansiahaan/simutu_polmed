@@ -20,12 +20,13 @@ class Jabatan extends RestController
         if ($jabatan) {
             $this->response([
                 'status'    => TRUE,
-                'data'      => $jabatan
+                'data'      => $jabatan,
+                'messages'   => 'success'
             ], RestController::HTTP_OK);
         } else {
             $this->response([
                 'status'    => FALSE,
-                'message'   => 'No data were found'
+                'messages'   => 'errors'
             ], RestController::HTTP_NOT_FOUND);
         }
     }
